@@ -53,6 +53,11 @@ return {
         },
       })
 
+      vim.lsp.config("sourcekit", {
+        -- Resolve sourcekit-lsp via active Xcode toolchain instead of relying on PATH.
+        cmd = { vim.trim(vim.fn.system("xcrun -f sourcekit-lsp")) },
+      })
+
       -- configs: https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
       vim.lsp.enable(
         {
@@ -62,6 +67,7 @@ return {
           "marksman",
           "pyright",
           "ruff",
+          "sourcekit",
           "taplo",
           "yamlls",
         }
