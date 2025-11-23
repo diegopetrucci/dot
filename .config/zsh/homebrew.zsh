@@ -1,0 +1,3 @@
+# Homebrew
+
+export HOMEBREW_AUTO_UPDATE_SECS=86400
