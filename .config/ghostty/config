@@ -1,0 +1,18 @@
+# Transient prompt
+keybind = global:cmd+shift+`=toggle_quick_terminal
+
+# New line w/ shift enter
+keybind = shift+enter=text:\n
+
+# Pass `clear` when pressing cmd k
+keybind = cmd+k=text:clear\r
+
+# Theming
+background-opacity = 0.96
+background-blur-radius = 40
+font-size = 18
+macos-titlebar-style = tabs
+macos-titlebar-proxy-icon = hidden
+theme = catppuccin-mocha.conf
+window-width = 105
+window-height = 30
