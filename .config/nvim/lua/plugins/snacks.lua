@@ -23,7 +23,7 @@ return {
     notifier = {
       enabled = true,
       timeout = 3000,
-      style = "minimal",
+      -- style = "minimal",
     },
     scroll = { enabled = true },
     statuscolumn = { enabled = true },
