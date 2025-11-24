@@ -1,15 +1,28 @@
 return {
-  "folke/snacks.nvim",
-  ---@type snacks.Config
-  opts = {
-    dashboard = {
-      sections = {
-        { section = "header" },
-        { title = "Files", section = "recent_files", indent = 2, padding = 1 },
-        { title = "Projects", section = "projects", indent = 2, padding = 1 },
-      },
-      preset = {
-        header = [[
+	"folke/snacks.nvim",
+	---@type snacks.Config
+	opts = {
+		dashboard = {
+			sections = {
+				{
+					section = "header",
+				},
+				{
+					title = "Files",
+					section = "recent_files",
+					cwd = true,
+					indent = 2,
+					padding = 1,
+				},
+				{
+					title = "Projects",
+					section = "projects",
+					indent = 2,
+					padding = 1,
+				},
+			},
+			preset = {
+				header = [[
                                                                    
       ████ ██████           █████      ██                 
      ███████████             █████                            
@@ -19,7 +32,7 @@ return {
  ███████████ ███    ███ █████████ █████ █████ ████ █████ 
 ██████  █████████████████████ ████ █████ █████ ████ ██████
     ]],
-      }
-    }
-  }
+			},
+		},
+	},
 }
