@@ -1,0 +1,78 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+usage() {
+  cat <<'USAGE'
+Usage: xcode-free-space [-y]
+
+Deletes Xcode caches, build artifacts, and unavailable simulators to reclaim disk
+space. Pass -y to skip the confirmation prompt.
+USAGE
+}
+
+force=0
+while getopts ":yh" opt; do
+  case "${opt}" in
+    y)
+      force=1
+      ;;
+    h)
+      usage
+      exit 0
+      ;;
+    ?)
+      usage >&2
+      exit 1
+      ;;
+  esac
+end
+shift $((OPTIND - 1))
+
+if [[ $# -ne 0 ]]; then
+  usage >&2
+  exit 1
+fi
+
+XCODE_PATHS=(
+  "/.DocumentRevisions-V100/"
+  "$HOME/Library/Developer/Xcode/DerivedData"
+  "$HOME/Library/Developer/Xcode/Archives"
+  "$HOME/Library/Developer/Xcode/iOS DeviceSupport"
+  "$HOME/Library/Developer/Xcode/watchOS DeviceSupport"
+  "$HOME/Library/Developer/Xcode/tvOS DeviceSupport"
+  "$HOME/Library/Developer/Xcode/visionOS DeviceSupport"
+  "$HOME/Library/Caches/com.apple.dt.Xcode"
+)
+
+if (( force == 0 )); then
+  echo "The following paths will be deleted if they exist:"
+  for target in "${XCODE_PATHS[@]}"; do
+    printf '  - %s\n' "$target"
+  done
+  echo "Additionally, unavailable simulators will be removed via 'xcrun simctl'."
+  read -r -p "Proceed? [y/N] " reply
+  if [[ ! $reply =~ ^[Yy]$ ]]; then
+    echo "Aborted."
+    exit 0
+  fi
+fi
+
+for target in "${XCODE_PATHS[@]}"; do
+  if [[ -e "$target" ]]; then
+    echo "Deleting $target"
+    if [[ "$target" == "/.DocumentRevisions-V100/" ]]; then
+      sudo rm -rf "$target"
+    else
+      rm -rf "$target"
+    fi
+  fi
+done
+
+if command -v xcrun >/dev/null 2>&1; then
+  echo "Deleting unavailable simulators"
+  if ! xcrun simctl delete unavailable; then
+    echo "Failed to delete unavailable simulators" >&2
+  fi
+else
+  echo "xcrun not found; skipping simulator cleanup" >&2
+fi
