@@ -58,6 +58,9 @@ return {
 			vim.lsp.config("sourcekit", {
 				-- Resolve sourcekit-lsp via active Xcode toolchain instead of relying on PATH.
 				cmd = { vim.trim(vim.fn.system("xcrun -f sourcekit-lsp")) },
+				-- on_attach = function(client, bufnr)
+				-- 	require("workspace-diagnostics").populate_workspace_diagnostics(client, 0)
+				-- end,
 			})
 
 			-- configs: https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
@@ -79,5 +82,20 @@ return {
 				require("workspace-diagnostics").populate_workspace_diagnostics(client, 0)
 			end
 		end,
+	},
+	{
+		"stevanmilic/nvim-lspimport",
+		-- auto imports for pyright
+		keys = {
+			{
+				"<leader>ai",
+				function()
+					require("lspimport").import()
+				end,
+				mode = "n",
+				noremap = true,
+				desc = "Add missing import",
+			},
+		},
 	},
 }
