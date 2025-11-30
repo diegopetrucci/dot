@@ -1,0 +1,120 @@
+packages:
+  darwin:
+    brews:
+      - 'bash'
+      - 'chezmoi'
+      - 'coreutils'
+      - 'docker-compose'
+      - 'fd'
+      - 'ffmpeg'
+      - 'fzf'
+      - 'gemini-cli'
+      - 'gh'
+      - 'ghostscript'
+      - 'imagemagick'
+      - 'kotlin-language-server'
+      - 'jq'
+      - 'lazygit'
+      - 'lua-language-server'
+      - 'luacheck'
+      - 'luarocks'
+      - 'markdownlint-cli'
+      - 'mas'
+      - 'mermaid-cli'
+      - 'mise'
+      - 'neovim'
+      - 'node'
+      - 'ollama'
+      - 'opencode-ai/tap/opencode'
+      - 'pipx'
+      - 'postgresql@15'
+      - 'pre-commit'
+      - 'pyenv'
+      - 'rg'
+      - 'ripgrep'
+      - 'pyenv-virtualenv'
+      - 'rbenv'
+      - 'speedtest-cli'
+      - 'swift-format'
+      - 'swiftformat'
+      - 'swiftlint'
+      - 'tilt'
+      - 'tree-sitter-cli'
+      - 'tmux'
+      - 'uv'
+      - 'wget'
+      - 'xcbeautify'
+      - 'xcode-build-server'
+      - 'xcp'
+      - 'yaml-language-server'
+      - 'xcode-build-server'
+      - 'yt-dlp'
+      - 'zoxide'
+    casks:
+      - 'alt-tab'
+      - 'bruno'
+      - 'claude-code'
+      - 'cursor'
+      - 'devcleaner'
+      - 'devtoys'
+      - 'diffusionbee'
+      - 'gcloud-cli'
+      - 'ghostty'
+      - 'github-copilot-for-xcode'
+      - 'jordanbaird-ice'
+      - 'lm-studio'
+      - 'obsidian'
+      - 'peripheryapp/periphery/periphery'
+      - 'raspberry-pi-imager'
+      - 'signal'
+      - 'telegram'
+      - 'warp'
+      - 'whisky'
+      - 'xcodes-app'
+      - 'th-ch/youtube-music/youtube-music'
+      - 'zed'
+      - 'zen'
+      - 'zoom'
+    mas:
+      - '6472630023' # Acidity
+      - '937984704' # Amphetamine
+      - '1091189122' # Bear
+      - '1352778147' # Bitwarden
+      - '6451469297' # DeArrow
+      - '640199958' # Developer
+      - '1457961323' # diskDeduper
+      - '524373870' # Due
+      - '1474335294' # GoodLinks
+      - '1502839586' # Hand Mirror
+      - '1666139593' # Homecoming for Mastodon
+      - '1533590432' # Homie
+      - '1544743900' # Hush
+      - '6639617400' # imgpls
+      - '1622835804' # Kagi for Safari
+      - '409183694' # Keynote
+      - '1659154653' # Mona
+      - '1592917505' # Noir
+      - '409203825' # Numbers
+      - '409201541' # Pages
+      - '592704001' # Photos Duplicate Cleaner
+      - '1160374471' # PiPifier
+      - '1289583905' # Pixelmator Pro
+      - '1540491573' # Scenecuts
+      - '6449873635' # Sink It
+      - '1176895641' # Spark
+      - '1573461917' # SponsorBlock
+      - '1671452642' # StopTheFonts
+      - '1376402589' # StopTheMadness
+      - '6471380298' # StopTheMadness Pro
+      - '1568262835' # Super Agent
+      - '6746719441' # Technotes
+      - '899247664' # TestFlight
+      - '425424353' # The Unarchiver
+      - '1450874784' # Transporter
+      - '1662217862' # Wipr
+    pipx:
+      - 'pymobiledevice3'
+    npm:
+      - '@github/copilot-language-server'
+      - '@mermaid-js/mermaid-cli'
+      - '@openai/codex'
