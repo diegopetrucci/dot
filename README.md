@@ -2,8 +2,7 @@
 
 In alphabethical order:
 
-- [Claude Code](https://github.com/diegopetrucci/dot/tree/main/.claude/commands)
-- [Codex](https://github.com/diegopetrucci/dot/tree/main/.codex/prompts)
+- Agents' custom commands (they're all the same): [Claude Code](https://github.com/diegopetrucci/dot/tree/main/.claude/commands), [Codex](https://github.com/diegopetrucci/dot/tree/main/.codex/prompts), [Amp](https://github.com/diegopetrucci/dot/tree/main/.config/amp/commands), [OpenCode](https://github.com/diegopetrucci/dot/tree/main/.config/opencode/command)
 - [Ghostty](https://github.com/diegopetrucci/dot/tree/main/.config/ghostty)
 - [Git config](https://github.com/diegopetrucci/dot/blob/main/.gitconfig) + [git ignore](https://github.com/diegopetrucci/dot/tree/main/.config/git)
 - [Neovim](https://github.com/diegopetrucci/dot/tree/main/.config/nvim)
