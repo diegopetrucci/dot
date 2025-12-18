@@ -3,7 +3,7 @@
 In alphabethical order:
 
 - AI agents':
-    - [Skills](https://github.com/diegopetrucci/dot/tree/main/.claude/skills](https://github.com/diegopetrucci/ai-agents-skills/)
+    - [Skills](https://github.com/diegopetrucci/ai-agents-skills)
     - [Prompts](https://github.com/diegopetrucci/dot/tree/main/.claude/commands)
 
 - [Atuin](https://github.com/diegopetrucci/dot/blob/main/atuin): command history search for my shell
