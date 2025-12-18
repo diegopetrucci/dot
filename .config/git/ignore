@@ -1,3 +1,6 @@
 .DS_Store
 
 **/.claude/settings.local.json
+
+# Disable pyright lsp/formatter per-project
+.disable-pyright
