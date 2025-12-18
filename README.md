@@ -9,6 +9,8 @@ In alphabethical order:
     - [Cursor](https://github.com/diegopetrucci/dot/tree/main/.cursor/commands)
     - [Gemini](https://github.com/diegopetrucci/dot/tree/main/.gemini/commands)
     - [OpenCode](https://github.com/diegopetrucci/dot/tree/main/.config/opencode/command)
+
+- [Atuin](https://github.com/diegopetrucci/dot/blob/main/atuin): command history search for my shell
 - [Chezmoi .packages data](https://github.com/diegopetrucci/dot/blob/main/.local/share/chezmoi/.chezmoidata/packages.yaml): chezmoi uses this big list of homebrew/npm/etc packages to run a custom script that keeps my machines in sync
 - [Ghostty](https://github.com/diegopetrucci/dot/tree/main/.config/ghostty): my terminal (emulator)
 - [Git config](https://github.com/diegopetrucci/dot/blob/main/.gitconfig) + [git ignore](https://github.com/diegopetrucci/dot/tree/main/.config/git)
