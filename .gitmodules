@@ -2,3 +2,7 @@
 	path = .claude/skills
 	url = https://github.com/diegopetrucci/ai-agents-skills
 	branch = main
+[submodule ".codex/skills"]
+	path = .codex/skills
+	url = https://github.com/diegopetrucci/ai-agents-skills
+	branch = main
