@@ -1,9 +1,10 @@
 # Misc settings
 
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-HYPHEN_INSENSITIVE="true"
+# Set word characters - removing punctuation so word deletion stops at them
+WORDCHARS=''
 
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-zstyle ':omz:update' mode auto      # update automatically without asking
+bindkey '^[^?' backward-kill-word
+
+HYPHEN_INSENSITIVE="true"
+DISABLE_AUTO_UPDATE="true"
+HOMEBREW_NO_ENV_HINTS=1

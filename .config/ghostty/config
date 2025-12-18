@@ -1,11 +1,32 @@
-# Transient prompt
-keybind = global:cmd+shift+`=toggle_quick_terminal
+mouse-hide-while-typing = true
+scrollback-limit = 1000000
+window-save-state = always
+
+# Transient prompt from anywhere
+keybind = global:cmd+ctrl+z=toggle_quick_terminal
 
 # New line w/ shift enter
 keybind = shift+enter=text:\n
 
 # Pass `clear` when pressing cmd k
 keybind = cmd+k=text:clear\r
+
+# Splits navigation
+keybind = ctrl+h=goto_split:left
+keybind = ctrl+j=goto_split:bottom
+keybind = ctrl+k=goto_split:top
+keybind = ctrl+l=goto_split:right
+
+# Create new splits
+keybind = ctrl+a>h=new_split:left
+keybind = ctrl+a>j=new_split:down
+keybind = ctrl+a>k=new_split:up
+keybind = ctrl+a>l=new_split:right
+
+keybind = super+r=reload_config
+
+# Rename the current tab
+keybind = ctrl+shift+i=prompt_surface_title
 
 # Theming
 background-opacity = 0.96

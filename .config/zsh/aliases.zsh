@@ -20,6 +20,10 @@ mkcd () {
   cd "$1"
 }
 
+# Weird paths
+alias icloud-drive="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/"
+alias obsidian-vault="cd ~/Library/Mobile\ Documents/iCloud\~md\~obsidian/Documents/Main"
+
 # Chezmoi
 alias cs="chezmoi status"
 alias cm="chezmoi merge"
@@ -35,6 +39,8 @@ alias ga="git add"
 alias gaa="git add ."
 # Commit with a message
 alias gcm="git commit -m"
+# Unstage all files
+alias grhead="git reset HEAD"
 # Pull
 alias gl="git pull"
 # Push
@@ -51,6 +57,13 @@ alias grr="git branch -r"
 # Run Claude Code in full automatic mode
 alias claude-yolo="claude --dangerously-skip-permissions"
 # Run Codex in full automatic mode
-alias codex-yolo="npm install -g @openai/codex@latest && codex --dangerously-bypass-approvals-and-sandbox"
+alias codex-yolo="codex --dangerously-bypass-approvals-and-sandbox"
 # Run Gemini in full automatic mode
 alias gemini-yolo="gemini --yolo"
+
+# Xcode
+
+# List available simulators
+alias simulators="xcrun simctl list devices available"
+# Clean derived data
+alias cdd="rm -rf ~/Library/Developer/Xcode/DerivedData/"

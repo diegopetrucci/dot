@@ -1,2 +1,3 @@
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.local/bin/scripts:$PATH"
+typeset -U path
+path+=("$HOME/.local/bin")
+path=("$HOME/.local/bin/scripts" $path)
