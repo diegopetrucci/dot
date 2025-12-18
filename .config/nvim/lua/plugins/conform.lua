@@ -6,11 +6,13 @@ return {
 		local conform = require("conform")
 
 		conform.setup({
+			-- https://github.com/stevearc/conform.nvim?tab=readme-ov-file#formatters
 			formatters_by_ft = {
+				json = { "yq" },
 				kotlin = { "ktfmt" },
 				lua = { "stylua" },
 				python = { "ruff" },
-				swift = { "swiftformat", "swiftlint" },
+				swift = { "swift" },
 				toml = { "taplo" },
 				yaml = { "yamlfmt" },
 				-- Use the "*" filetype to run formatters on all filetypes.

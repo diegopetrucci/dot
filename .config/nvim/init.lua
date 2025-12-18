@@ -13,7 +13,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- config nvim
-require("vim-options")
+require("keymaps")
+require("options")
 
 -- start lazy
 require("lazy").setup("plugins")
