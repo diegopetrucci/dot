@@ -2,13 +2,9 @@
 
 In alphabethical order:
 
-- Agents' custom commands (they're all the same):
-    - [Amp](https://github.com/diegopetrucci/dot/tree/main/.config/amp/commands)
-    - [Claude Code](https://github.com/diegopetrucci/dot/tree/main/.claude/commands)
-    - [Codex](https://github.com/diegopetrucci/dot/tree/main/.codex/prompts)
-    - [Cursor](https://github.com/diegopetrucci/dot/tree/main/.cursor/commands)
-    - [Gemini](https://github.com/diegopetrucci/dot/tree/main/.gemini/commands)
-    - [OpenCode](https://github.com/diegopetrucci/dot/tree/main/.config/opencode/command)
+- AI agents':
+    - [Skills](https://github.com/diegopetrucci/dot/tree/main/.claude/skills)
+    - [Prompts](https://github.com/diegopetrucci/dot/tree/main/.claude/commands)
 
 - [Atuin](https://github.com/diegopetrucci/dot/blob/main/atuin): command history search for my shell
 - [Chezmoi .packages data](https://github.com/diegopetrucci/dot/blob/main/.local/share/chezmoi/.chezmoidata/packages.yaml): chezmoi uses this big list of homebrew/npm/etc packages to run a custom script that keeps my machines in sync
