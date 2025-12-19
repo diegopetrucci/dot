@@ -6,3 +6,27 @@
 	path = .codex/skills
 	url = https://github.com/diegopetrucci/ai-agents-skills
 	branch = main
+[submodule ".claude/commands"]
+	path = .claude/commands
+	url = https://github.com/diegopetrucci/ai-custom-prompts
+	branch = main
+[submodule ".codex/prompts"]
+	path = .codex/prompts
+	url = https://github.com/diegopetrucci/ai-custom-prompts
+	branch = main
+[submodule ".gemini/commands"]
+	path = .gemini/commands
+	url = https://github.com/diegopetrucci/ai-custom-prompts
+	branch = main
+[submodule ".cursor/commands"]
+	path = .cursor/commands
+	url = https://github.com/diegopetrucci/ai-custom-prompts
+	branch = main
+[submodule ".config/amp/commands"]
+	path = .config/amp/commands
+	url = https://github.com/diegopetrucci/ai-custom-prompts
+	branch = main
+[submodule ".config/opencode/command"]
+	path = .config/opencode/command
+	url = https://github.com/diegopetrucci/ai-custom-prompts
+	branch = main
