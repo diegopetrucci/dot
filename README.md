@@ -2,7 +2,7 @@
 
 In alphabethical order:
 
-- AI agents': [skills](https://github.com/diegopetrucci/ai-agents-skills) and [prompts](https://github.com/diegopetrucci/dot/tree/main/.claude/commands)
+- AI agents': [skills](https://github.com/diegopetrucci/ai-agents-skills) and [prompts](https://github.com/diegopetrucci/ai-custom-prompts/tree/c58fa1ea016990bcd1f7fd3163f8aa87f575fc99)
 - [Atuin](https://github.com/diegopetrucci/dot/blob/main/atuin): command history search for my shell
 - [Chezmoi .packages data](https://github.com/diegopetrucci/dot/blob/main/.local/share/chezmoi/.chezmoidata/packages.yaml): chezmoi uses this big list of homebrew/npm/etc packages to run a custom script that keeps my machines in sync
 - [Ghostty](https://github.com/diegopetrucci/dot/tree/main/.config/ghostty): my terminal (emulator)
