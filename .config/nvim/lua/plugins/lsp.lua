@@ -95,6 +95,9 @@ return {
 			vim.lsp.enable(lsp_servers)
 
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
+			vim.keymap.set("n", "<leader>cc", vim.lsp.buf.incoming_calls, { desc = "Callers (LSP)" })
+			vim.keymap.set("n", "<leader>cr", vim.lsp.buf.references, { desc = "References (LSP)" })
+			vim.keymap.set("n", "<leader>cd", vim.lsp.buf.definition, { desc = "Definition (LSP)" })
 
 			for _, client in ipairs(vim.lsp.get_clients()) do
 				require("workspace-diagnostics").populate_workspace_diagnostics(client, 0)

@@ -27,6 +27,12 @@ return {
 			log_level = vim.log.levels.ERROR,
 		})
 
+		require("conform").formatters.stylua = {
+			env = {
+				indent_width = 4,
+			},
+		}
+
 		vim.keymap.set({ "n", "v" }, "<leader>fo", function()
 			conform.format({
 				lsp_fallback = true,

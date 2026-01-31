@@ -16,6 +16,9 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- Clear search highlighting with Esc in normal mode
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
+-- Source current file
+vim.keymap.set("n", "<leader>R", "<cmd>source %<CR>", { desc = "Source current file" })
+
 -- Stay in visual mode when indenting
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
