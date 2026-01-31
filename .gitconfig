@@ -27,6 +27,8 @@
     autocorrect = prompt
 [init]
     defaultBranch = main
+[mergetool]
+	keepBackup = true
 [pull]
     rebase = true
 [push]
