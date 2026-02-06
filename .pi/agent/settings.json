@@ -1,0 +1,12 @@
+{
+  "lastChangelogVersion": "0.52.7",
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-5.3-codex",
+  "defaultThinkingLevel": "high",
+  "theme": "dark",
+  "editorPaddingX": 1,
+  "quietStartup": true,
+  "compaction": {
+    "enabled": true
+  }
+}
