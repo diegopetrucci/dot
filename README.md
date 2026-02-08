@@ -3,14 +3,15 @@
 In alphabethical order:
 
 - AI agents:
-- - [pi](https://github.com/diegopetrucci/dot/blob/main/.pi) is brilliant, just brilliant
+- - [pi](https://github.com/diegopetrucci/dot/blob/main/.pi) is brilliant, just brilliant. My harness of choice.
+- - but here's my [codex](https://github.com/diegopetrucci/dot/blob/main/.codex), [claude](https://github.com/diegopetrucci/dot/blob/main/.claude), [amp](https://github.com/diegopetrucci/dot/blob/main/.config/amp), and [opencode](https://github.com/diegopetrucci/dot/blob/main/.config/opencode) configs
 - - all the [skills](https://github.com/diegopetrucci/ai-agents-skills) and [prompts](https://github.com/diegopetrucci/ai-custom-prompts/tree/c58fa1ea016990bcd1f7fd3163f8aa87f575fc99) I use
 - [Atuin](https://github.com/diegopetrucci/dot/blob/main/atuin): command history search for my shell
 - [Chezmoi .packages data](https://github.com/diegopetrucci/dot/blob/main/.local/share/chezmoi/.chezmoidata/packages.yaml): chezmoi uses this big list of homebrew/npm/etc packages to run a custom script that keeps my machines in sync
 - [Ghostty](https://github.com/diegopetrucci/dot/tree/main/.config/ghostty): my terminal (emulator)
 - [Git config](https://github.com/diegopetrucci/dot/blob/main/.gitconfig) + [git ignore](https://github.com/diegopetrucci/dot/tree/main/.config/git)
 - [Neovim](https://github.com/diegopetrucci/dot/tree/main/.config/nvim): btw
-- [Tmux](https://github.com/diegopetrucci/dot/tree/main/.config/tmux): I don't love tmux, and have been trying to recreate its functionality in Ghostty, but it works fine for now. I use it mostly for session restoration and the lil' windows at the bottom
+- [Tmux](https://github.com/diegopetrucci/dot/tree/main/.config/tmux): Ghostty has mostly replaced it for me, but still use it for always running sessions
 - [Scripts](https://github.com/diegopetrucci/dot/tree/main/.local/bin/scripts): some scripts that make my life easier
 - [ZSH](https://github.com/diegopetrucci/dot/blob/main/.zshrc) + [sub directories](https://github.com/diegopetrucci/dot/tree/main/.config/zsh)
 
