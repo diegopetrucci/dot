@@ -4,6 +4,7 @@
 
 # Prefer neovim
 alias vim="nvim"
+alias v="nvim"
 # Open the current directory in Finder
 alias of="open ."
 # List all files in the current directory, one per line
@@ -51,13 +52,17 @@ alias glol="git log --oneline"
 alias gfp="git fetch --prune"
 # List remote branches
 alias grr="git branch -r"
+# Create a branch and switch to it
+alias gsc="git switch -c"
 
 # AI agents
 
 # Run Claude Code in full automatic mode
 alias claude-yolo="claude --dangerously-skip-permissions"
+alias ccy="claude --dangerously-skip-permissions"
 # Run Codex in full automatic mode
 alias codex-yolo="codex --dangerously-bypass-approvals-and-sandbox"
+alias cxy="codex --dangerously-bypass-approvals-and-sandbox"
 # Run Gemini in full automatic mode
 alias gemini-yolo="gemini --yolo"
 
