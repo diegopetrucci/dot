@@ -1,4 +1,8 @@
 local function xcodebuild_device()
+	if not vim.g.xcodebuild_platform or vim.g.xcodebuild_platform == "" then
+		return ""
+	end
+
 	if vim.g.xcodebuild_platform == "macOS" then
 		return " macOS"
 	end
@@ -81,7 +85,9 @@ return {
 					},
 				},
 				{
-					"' ' .. vim.g.xcodebuild_last_status",
+					function()
+						return " " .. (vim.g.xcodebuild_last_status or "")
+					end,
 					color = {
 						fg = secondary_fg,
 						bg = bg,
@@ -95,7 +101,9 @@ return {
 					},
 				},
 				{
-					"'󰙨 ' .. vim.g.xcodebuild_test_plan",
+					function()
+						return "󰙨 " .. (vim.g.xcodebuild_test_plan or "")
+					end,
 					color = {
 						fg = secondary_fg,
 						bg = bg,
@@ -142,6 +150,13 @@ return {
 				},
 			},
 			lualine_y = {
+				-- {
+				-- 	"lsp_status",
+				-- 	color = {
+				-- 		fg = secondary_fg,
+				-- 		bg = bg,
+				-- 	},
+				-- },
 			},
 			lualine_z = {},
 		}

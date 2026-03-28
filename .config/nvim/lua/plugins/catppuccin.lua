@@ -26,10 +26,7 @@ return {
         notify = false,
         snacks = {
           enabled = true,
-          indent_scope_color = "lavander",
-        },
-        telescope = {
-          enabled = true,
+          indent_scope_color = "lavender",
         },
         lsp_trouble = true,
         which_key = true,

@@ -11,8 +11,8 @@ return {
 				json = { "yq" },
 				kotlin = { "ktfmt" },
 				lua = { "stylua" },
-				python = { "ruff" },
-				swift = { "swift" },
+				python = { "ruff_format" },
+				swift = { "swift_format" },
 				toml = { "taplo" },
 				yaml = { "yamlfmt" },
 				-- Use the "*" filetype to run formatters on all filetypes.
@@ -22,20 +22,14 @@ return {
 				["_"] = { "trim_whitespace" },
 			},
 			format_on_save = function(bufnr)
-				return { timeout_ms = 500, lsp_fallback = true }
+				return { timeout_ms = 500, lsp_format = "fallback" }
 			end,
 			log_level = vim.log.levels.ERROR,
 		})
 
-		require("conform").formatters.stylua = {
-			env = {
-				indent_width = 4,
-			},
-		}
-
 		vim.keymap.set({ "n", "v" }, "<leader>fo", function()
 			conform.format({
-				lsp_fallback = true,
+				lsp_format = "fallback",
 				async = false,
 				timeout_ms = 500,
 			})

@@ -20,6 +20,9 @@ return {
 	{
 		"mason-org/mason-lspconfig.nvim",
 		opts = {
+			automatic_enable = {
+				exclude = { "pylsp" },
+			},
 			ensure_installed = {
 				"copilot",
 				"lua_ls",
@@ -63,16 +66,19 @@ return {
 				-- end,
 			})
 
-			-- Helper function to check if pyright should be enabled
-			local function should_enable_pyright()
-				local root_markers = { "pyproject.toml", "setup.py", "requirements.txt", ".git" }
-				local root_dir = vim.fs.root(0, root_markers)
-
-				if root_dir and vim.fn.filereadable(root_dir .. "/.disable-pyright") == 1 then
-					return false
-				end
-				return true
-			end
+			vim.lsp.config("pyright", {
+				root_dir = function(bufnr, on_dir)
+					local root_markers = { "pyproject.toml", "setup.py", "requirements.txt", ".git" }
+					local root = vim.fs.root(bufnr, root_markers)
+					if root and vim.uv.fs_stat(root .. "/.disable-pyright") then
+						return
+					end
+					if root then
+						on_dir(root)
+					end
+				end,
+				single_file_support = false,
+			})
 
 			-- Build LSP list conditionally
 			local lsp_servers = {
@@ -80,16 +86,12 @@ return {
 				"lua_ls",
 				"kotlin_lsp",
 				"marksman",
+				"pyright",
 				"ruff",
 				"sourcekit",
 				"taplo",
 				"yamlls",
 			}
-
-			-- Only add pyright if not disabled
-			if should_enable_pyright() then
-				table.insert(lsp_servers, 5, "pyright") -- Insert after marksman
-			end
 
 			-- configs: https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 			vim.lsp.enable(lsp_servers)
@@ -99,9 +101,14 @@ return {
 			vim.keymap.set("n", "<leader>cr", vim.lsp.buf.references, { desc = "References (LSP)" })
 			vim.keymap.set("n", "<leader>cd", vim.lsp.buf.definition, { desc = "Definition (LSP)" })
 
-			for _, client in ipairs(vim.lsp.get_clients()) do
-				require("workspace-diagnostics").populate_workspace_diagnostics(client, 0)
-			end
+			vim.api.nvim_create_autocmd("LspAttach", {
+				callback = function(args)
+					local client = vim.lsp.get_client_by_id(args.data.client_id)
+					if client then
+						require("workspace-diagnostics").populate_workspace_diagnostics(client, args.buf)
+					end
+				end,
+			})
 		end,
 	},
 	{
