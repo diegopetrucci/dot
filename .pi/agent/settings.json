@@ -1,12 +1,19 @@
 {
-  "lastChangelogVersion": "0.52.7",
+  "lastChangelogVersion": "0.62.0",
   "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.3-codex",
+  "defaultModel": "gpt-5.4",
   "defaultThinkingLevel": "high",
   "theme": "dark",
   "editorPaddingX": 1,
   "quietStartup": true,
   "compaction": {
     "enabled": true
-  }
+  },
+  "packages": [
+    "https://github.com/nicobailon/pi-boomerang",
+    "https://github.com/nicobailon/pi-review-loop",
+    "npm:@victor-software-house/pi-multicodex",
+    "npm:pi-librarian",
+    "npm:pi-subagents"
+  ]
 }
