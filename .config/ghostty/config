@@ -1,12 +1,17 @@
 mouse-hide-while-typing = true
 scrollback-limit = 1000000
 window-save-state = always
+window-inherit-working-directory = false
+tab-inherit-working-directory = false
+split-inherit-working-directory = true
+notify-on-command-finish = always
+notify-on-command-finish-action = bell,notify
 
 # Transient prompt from anywhere
 keybind = global:cmd+ctrl+z=toggle_quick_terminal
 
 # New line w/ shift enter
-keybind = shift+enter=text:\n
+# keybind = shift+enter=text:\n
 
 # Splits navigation
 keybind = ctrl+h=goto_split:left
@@ -21,6 +26,7 @@ keybind = ctrl+a>k=new_split:up
 keybind = ctrl+a>l=new_split:right
 
 keybind = super+r=reload_config
+# keybind = ctrl+a>f=toggle_split_zoom
 
 # Rename the current tab
 keybind = ctrl+shift+i=prompt_surface_title
@@ -34,3 +40,4 @@ macos-titlebar-proxy-icon = hidden
 theme = catppuccin-mocha.conf
 window-width = 105
 window-height = 30
+#window-padding-y = 0
