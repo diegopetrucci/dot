@@ -1,20 +1,18 @@
 return {
   "wojciech-kulik/xcodebuild.nvim",
   dependencies = {
-    "nvim-telescope/telescope.nvim",
     "folke/snacks.nvim",
     "MunifTanjim/nui.nvim",
     "nvim-treesitter/nvim-treesitter",
   },
   keys = {
     { "<leader>X", "<cmd>XcodebuildPicker<cr>", desc = "Show Xcodebuild Actions" },
-    { "<leader>X", "<cmd>XcodebuildPicker<cr>", desc = "Show Xcodebuild Actions" },
     { "<leader>xf", "<cmd>XcodebuildProjectManager<cr>", desc = "Show Project Manager Actions" },
     { "<leader>xb", "<cmd>XcodebuildBuild<cr>", desc = "Build Project" },
     { "<leader>xB", "<cmd>XcodebuildBuildForTesting<cr>", desc = "Build For Testing" },
     { "<leader>xr", "<cmd>XcodebuildBuildRun<cr>", desc = "Build & Run Project" },
     { "<leader>xt", "<cmd>XcodebuildTest<cr>", desc = "Run Tests" },
-    { "<leader>xt", "<cmd>XcodebuildTestSelected<cr>", desc = "Run Selected Tests" },
+    { "<leader>xS", "<cmd>XcodebuildTestSelected<cr>", desc = "Run Selected Tests" },
     { "<leader>xT", "<cmd>XcodebuildTestClass<cr>", desc = "Run Current Test Class" },
     { "<leader>x.", "<cmd>XcodebuildTestRepeat<cr>", desc = "Repeat Last Test Run" },
     { "<leader>xl", "<cmd>XcodebuildToggleLogs<cr>", desc = "Toggle Xcodebuild Logs" },
@@ -25,11 +23,14 @@ return {
     { "<leader>xp", "<cmd>XcodebuildPreviewGenerateAndShow<cr>", desc = "Generate Preview" },
     { "<leader>x<cr>", "<cmd>XcodebuildPreviewToggle<cr>", desc = "Toggle Preview" },
     { "<leader>xd", "<cmd>XcodebuildSelectDevice<cr>", desc = "Select Device" },
-    { "<leader>xq", "<cmd>Telescope ickfix<cr>", desc = "Show QuickFix List" },
+    { "<leader>xq", "<cmd>Trouble qflist open<cr>", desc = "Show QuickFix List" },
     { "<leader>xx", "<cmd>XcodebuildQuickfixLine<cr>", desc = "Quickfix Line" },
     { "<leader>xa", "<cmd>XcodebuildCodeActions<cr>", desc = "Show Code Actions" },
   },
   opts = {
+    code_coverage = {
+      enabled = true,
+    },
     integrations = {
       -- Always secure the script before using `pymobiledevice`
       -- https://github.com/wojciech-kulik/xcodebuild.nvim/wiki/Integrations#-debugging-on-ios-17
