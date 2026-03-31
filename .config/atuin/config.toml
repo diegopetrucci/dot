@@ -16,6 +16,12 @@ sync_frequency = "10m"
 ## possible values: auto, full, compact
 style = "compact"
 
+[sync]
+# Enable sync v2 by default
+# This ensures that sync v2 is enabled for new installs only
+# In a later release it will become the default across the board
+records = true
+
 [theme]
 ## Color theme to use for rendering in the terminal.
 ## There are some built-in themes, including the base theme ("default"),
