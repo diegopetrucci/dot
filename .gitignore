@@ -2,3 +2,6 @@
 .config/nvim/lua/plugins/node_modules
 .config/nvim/lua/plugins/package-lock.json
 .config/nvim/lua/plugins/package.json
+
+AGENTS.md
+.claude/CLAUDE.md
