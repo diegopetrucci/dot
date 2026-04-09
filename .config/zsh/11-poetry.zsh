@@ -1,0 +1,3 @@
+# Poetry
+
+fpath+=~/.zfunc
