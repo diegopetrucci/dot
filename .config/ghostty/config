@@ -1,35 +1,32 @@
-mouse-hide-while-typing = true
-scrollback-limit = 1000000
-window-save-state = always
-window-inherit-working-directory = false
-tab-inherit-working-directory = false
-split-inherit-working-directory = true
-notify-on-command-finish = always
-notify-on-command-finish-action = bell,notify
-
-# Transient prompt from anywhere
+# Keybinds
 keybind = global:cmd+ctrl+z=toggle_quick_terminal
-
-# New line w/ shift enter
-# keybind = shift+enter=text:\n
-
-# Splits navigation
 keybind = ctrl+h=goto_split:left
 keybind = ctrl+j=goto_split:bottom
 keybind = ctrl+k=goto_split:top
 keybind = ctrl+l=goto_split:right
-
-# Create new splits
 keybind = ctrl+a>h=new_split:left
 keybind = ctrl+a>j=new_split:down
 keybind = ctrl+a>k=new_split:up
 keybind = ctrl+a>l=new_split:right
-
 keybind = super+r=reload_config
+keybind = ctrl+shift+i=prompt_surface_title
+# keybind = shift+enter=text:\n
 # keybind = ctrl+a>f=toggle_split_zoom
 
-# Rename the current tab
-keybind = ctrl+shift+i=prompt_surface_title
+# Mouse & Scroll
+mouse-hide-while-typing = true
+scrollback-limit = 1000000
+
+# Notifications
+notify-on-command-finish = always
+notify-on-command-finish-action = bell,notify
+bell-features = attention,title
+
+# Session
+window-save-state = always
+window-inherit-working-directory = false
+tab-inherit-working-directory = false
+split-inherit-working-directory = true
 
 # Theming
 background-opacity = 0.96
