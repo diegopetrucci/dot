@@ -15,6 +15,7 @@ alias aliases="grep '^alias' ~/.config/zsh/aliases.zsh"
 alias brew-leaves="brew leaves --installed-on-request"
 # Set python3 as the default python
 alias python=python3
+alias gt="gittower ."
 # Create a directory and change into it
 mkcd () {
   \mkdir -p "$1"
@@ -28,7 +29,17 @@ alias obsidian-vault="cd ~/Library/Mobile\ Documents/iCloud\~md\~obsidian/Docume
 # Chezmoi
 alias cs="chezmoi status"
 alias cm="chezmoi merge"
-alias ca="chezmoi apply"
+alias cadd="chezmoi add"
+alias capp="chezmoi apply"
+# Add ~/.openclaw to chezmoi and commit
+sync-openclaw() {
+  chezmoi status | awk '/^DA / { print $2 }' | while read -r f; do
+    chezmoi forget --force ~/"$f"
+  done
+  chezmoi add ~/.openclaw && \
+  git -C "$(chezmoi source-path)" add private_dot_openclaw && \
+  git -C "$(chezmoi source-path)" commit -m "Update openclaw"
+}
 
 # Git
 
@@ -65,6 +76,10 @@ alias codex-yolo="codex --dangerously-bypass-approvals-and-sandbox"
 alias cxy="codex --dangerously-bypass-approvals-and-sandbox"
 # Run Gemini in full automatic mode
 alias gemini-yolo="gemini --yolo"
+# Run Qwen in full automatic mode
+alias qwen-yolo="qwen --yolo"
+# Run Mistral Vibe in full automatic mode
+alias vibe-yolo="vibe --auto-approve"
 
 # Xcode
 
