@@ -45,7 +45,7 @@ return {
 			define("DapBreakpointRejected", { text = "", texthl = "DiagnosticError", linehl = "", numhl = "" })
 			define("DapStopped", { text = "", texthl = "DiagnosticOk", linehl = "", numhl = "" })
 			define("DapLogPoint", { text = "", texthl = "DiagnosticInfo", linehl = "", numhl = "" })
-			define("DapLogPoint", { text = "", texthl = "DiagnosticInfo", linehl = "", numhl = "" })
+			define("DapBreakpointCondition", { text = "", texthl = "DiagnosticWarn", linehl = "", numhl = "" })
 
 			setupListeners()
 

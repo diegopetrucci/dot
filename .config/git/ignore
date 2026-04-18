@@ -1,6 +1,8 @@
+# macOS
 .DS_Store
 
+# Agent local state
 **/.claude/settings.local.json
 
-# Disable pyright lsp/formatter per-project
+# Per-project tool toggles
 .disable-pyright

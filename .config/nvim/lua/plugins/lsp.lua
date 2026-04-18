@@ -45,6 +45,13 @@ return {
 			"artemave/workspace-diagnostics.nvim",
 		},
 		config = function()
+			local resolved_sourcekit_cmd
+			if vim.fn.executable("xcrun") == 1 then
+				resolved_sourcekit_cmd = { "xcrun", "sourcekit-lsp" }
+			elseif vim.fn.executable("sourcekit-lsp") == 1 then
+				resolved_sourcekit_cmd = { "sourcekit-lsp" }
+			end
+
 			vim.lsp.config("lua_ls", {
 				settings = {
 					Lua = {
@@ -58,13 +65,12 @@ return {
 				},
 			})
 
-			vim.lsp.config("sourcekit", {
-				-- Resolve sourcekit-lsp via active Xcode toolchain instead of relying on PATH.
-				cmd = { vim.trim(vim.fn.system("xcrun -f sourcekit-lsp")) },
-				-- on_attach = function(client, bufnr)
-				-- 	require("workspace-diagnostics").populate_workspace_diagnostics(client, 0)
-				-- end,
-			})
+			if resolved_sourcekit_cmd then
+				vim.lsp.config("sourcekit", {
+					-- Resolve sourcekit-lsp at server launch instead of shelling out during startup.
+					cmd = resolved_sourcekit_cmd,
+				})
+			end
 
 			vim.lsp.config("pyright", {
 				root_dir = function(bufnr, on_dir)
@@ -88,10 +94,13 @@ return {
 				"marksman",
 				"pyright",
 				"ruff",
-				"sourcekit",
 				"taplo",
 				"yamlls",
 			}
+
+			if resolved_sourcekit_cmd then
+				table.insert(lsp_servers, "sourcekit")
+			end
 
 			-- configs: https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 			vim.lsp.enable(lsp_servers)

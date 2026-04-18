@@ -9,7 +9,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/diegopetrucci/.claude/hooks/rtk-rewrite.sh"
+            "command": "~/.claude/hooks/rtk-rewrite.sh"
           }
         ]
       }
@@ -17,7 +17,7 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "/Users/diegopetrucci/.claude/statusline-command.sh"
+    "command": "~/.claude/statusline-command.sh"
   },
   "enabledPlugins": {
     "swift-lsp@claude-plugins-official": true,

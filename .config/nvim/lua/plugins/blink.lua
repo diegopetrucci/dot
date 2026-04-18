@@ -1,7 +1,6 @@
 return {
 	"saghen/blink.cmp",
 	dependencies = {
-		"rafamadriz/friendly-snippets",
 		"fang2hou/blink-copilot",
 	},
 	version = "1.*",
@@ -9,10 +8,6 @@ return {
 		keymap = {
 			-- https://cmp.saghen.dev/configuration/keymap
 			preset = "super-tab",
-			["<S-p>"] = { "select_prev", "fallback" },
-			["<S-n>"] = { "select_next", "fallback" },
-			["<S-u>"] = { "scroll_signature_up", "fallback" },
-			["<S-d>"] = { "scroll_signature_down", "fallback" },
 		},
 		appearance = {
 			nerd_font_variant = "mono",
@@ -74,4 +69,7 @@ return {
 		},
 	},
 	opts_extend = { "sources.default" },
+	config = function(_, opts)
+		require("blink.cmp").setup(opts)
+	end,
 }
