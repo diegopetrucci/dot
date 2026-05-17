@@ -50,3 +50,8 @@ vim.keymap.set("n", "<leader>cn", function()
 	vim.fn.setreg("+", p)
 	vim.notify("Copied: " .. p)
 end, { desc = "Copy file name" })
+
+-- Update plugins via vim.pack
+vim.keymap.set("n", "<leader>pu", function()
+	vim.pack.update()
+end, { desc = "Update plugins (vim.pack)" })
