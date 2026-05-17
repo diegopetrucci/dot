@@ -18,11 +18,8 @@
     prune = true
     pruneTags = true
 [gitbutler]
-    aiAnthropicKeyOption = bringYourOwn
-    aiAnthropicModelName = claude-sonnet-4-0
-    aiModelProvider = anthropic
     aiOpenAIKeyOption = bringYourOwn
-    signCommits = true
+    aiModelProvider = openai
 [help]
     autocorrect = prompt
 [init]
