@@ -10,7 +10,7 @@ alias of="open ."
 # List all files in the current directory, one per line
 alias lsao="ls -a1"
 # List all user-defined aliases
-alias aliases="grep '^alias' ~/.config/zsh/aliases.zsh"
+alias aliases="grep '^alias' ~/.config/zsh/04-aliases.zsh"
 # List all brews installed by the user
 alias brew-leaves="brew leaves --installed-on-request"
 # Set python3 as the default python
@@ -30,15 +30,11 @@ alias obsidian-vault="cd ~/Library/Mobile\ Documents/iCloud\~md\~obsidian/Docume
 alias cs="chezmoi status"
 alias cm="chezmoi merge"
 alias cadd="chezmoi add"
+alias cdiff="chezmoi diff"
 alias capp="chezmoi apply"
-# Add ~/.openclaw to chezmoi and commit
+# Sync ~/.openclaw via the daily sync script
 sync-openclaw() {
-  chezmoi status | awk '/^DA / { print $2 }' | while read -r f; do
-    chezmoi forget --force ~/"$f"
-  done
-  chezmoi add ~/.openclaw && \
-  git -C "$(chezmoi source-path)" add private_dot_openclaw && \
-  git -C "$(chezmoi source-path)" commit -m "Update openclaw"
+  "${HOME}/.local/bin/sync-openclaw-daily"
 }
 
 # Git
@@ -63,8 +59,14 @@ alias glol="git log --oneline"
 alias gfp="git fetch --prune"
 # List remote branches
 alias grr="git branch -r"
+# Switch branches and pull from remote
+gsw() { git switch "$@" && git pull; }
+# Switch to main
+alias gsm="git switch main && git pull"
 # Create a branch and switch to it
 alias gsc="git switch -c"
+# Cherry pick
+alias gcp="git cherry-pick"
 
 # AI agents
 
@@ -74,6 +76,25 @@ alias ccy="claude --dangerously-skip-permissions"
 # Run Codex in full automatic mode
 alias codex-yolo="codex --dangerously-bypass-approvals-and-sandbox"
 alias cxy="codex --dangerously-bypass-approvals-and-sandbox"
+# Attach or switch to the remote Codex tmux session, creating it if needed
+rcx() {
+  local session="remote-codex-7"
+
+  if tmux has-session -t "$session" 2>/dev/null; then
+    if [[ -n "${TMUX:-}" ]]; then
+      tmux switch-client -t "$session"
+    else
+      tmux attach-session -t "$session"
+    fi
+  else
+    if [[ -n "${TMUX:-}" ]]; then
+      tmux new-session -d -s "$session"
+      tmux switch-client -t "$session"
+    else
+      tmux new-session -s "$session"
+    fi
+  fi
+}
 # Run Gemini in full automatic mode
 alias gemini-yolo="gemini --yolo"
 # Run Qwen in full automatic mode
