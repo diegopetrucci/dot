@@ -20,9 +20,6 @@ return {
 	{
 		"mason-org/mason-lspconfig.nvim",
 		opts = {
-			automatic_enable = {
-				exclude = { "pylsp" },
-			},
 			ensure_installed = {
 				"copilot",
 				"lua_ls",
@@ -104,6 +101,7 @@ return {
 
 			-- configs: https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 			vim.lsp.enable(lsp_servers)
+			vim.lsp.enable("pylsp", false)
 
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
 			vim.keymap.set("n", "<leader>cc", vim.lsp.buf.incoming_calls, { desc = "Callers (LSP)" })
