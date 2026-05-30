@@ -8,6 +8,7 @@
     verbose = true
 [core]
     editor = code --wait
+    pager = hunk pager
 [diff]
     algorithm = histogram
     colorMoved = plain
