@@ -32,9 +32,17 @@ end
 return {
 	{
 		"mfussenegger/nvim-dap",
-		enabled = true,
 		dependencies = {
 			"wojciech-kulik/xcodebuild.nvim",
+		},
+		keys = {
+			{ "<leader>dd", desc = "Build & Debug" },
+			{ "<leader>dr", desc = "Debug Without Building" },
+			{ "<leader>dt", desc = "Debug Tests" },
+			{ "<leader>dT", desc = "Debug Class Tests" },
+			{ "<leader>dx", desc = "Terminate debugger" },
+			{ "<leader>b", desc = "Toggle Breakpoint" },
+			{ "<leader>B", desc = "Toggle Message Breakpoint" },
 		},
 		config = function()
 			local xcodebuild = require("xcodebuild.integrations.dap")
