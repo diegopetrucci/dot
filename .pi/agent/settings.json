@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.74.1",
+  "lastChangelogVersion": "0.75.5",
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-5.5",
   "defaultThinkingLevel": "off",
@@ -34,7 +34,9 @@
     "npm:@ff-labs/pi-fff",
     "npm:@diegopetrucci/pi-inline-bash",
     "npm:@diegopetrucci/pi-triage-comments",
-    "npm:@howaboua/pi-codex-conversion"
+    "npm:@howaboua/pi-codex-conversion",
+    "npm:@diegopetrucci/pi-brrr",
+    "npm:@diegopetrucci/pi-review"
   ],
   "hideThinkingBlock": false
 }
