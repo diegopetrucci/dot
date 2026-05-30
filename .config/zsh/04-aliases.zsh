@@ -70,6 +70,10 @@ alias gcp="git cherry-pick"
 
 # AI agents
 
+# Install The Last Harness from the main branch
+alias tlh-install-from-main="curl -fsSL https://raw.githubusercontent.com/diegopetrucci/the-last-harness/main/install.sh | bash -s -- --ref main --track ref"
+# Install The Last Harness from the latest release
+alias tlh-install-from-release="curl -fsSL https://github.com/diegopetrucci/the-last-harness/releases/latest/download/install.sh | bash -s --"
 # Run Claude Code in full automatic mode
 alias claude-yolo="claude --dangerously-skip-permissions"
 alias ccy="claude --dangerously-skip-permissions"
@@ -93,6 +97,19 @@ rcx() {
     else
       tmux new-session -s "$session"
     fi
+  fi
+}
+# Attach or switch to the agents zellij session, creating it if needed
+agents() {
+  local session="agents"
+
+  if [[ -n "${ZELLIJ:-}" ]]; then
+    if ! zellij list-sessions --short --no-formatting | grep -Fxq -- "$session"; then
+      zellij attach --create-background "$session"
+    fi
+    zellij action switch-session "$session"
+  else
+    zellij attach --create "$session"
   fi
 }
 # Run Gemini in full automatic mode

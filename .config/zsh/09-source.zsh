@@ -5,4 +5,3 @@ source /opt/homebrew/share/zsh-you-should-use/you-should-use.plugin.zsh
 
 source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
 source /opt/homebrew/opt/chruby/share/chruby/auto.sh
-
