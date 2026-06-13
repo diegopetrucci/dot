@@ -62,16 +62,6 @@ vim.opt.listchars = {
 	precedes = "‹",
 }
 
--- Show invisible characters
-vim.opt.list = true
-vim.opt.listchars = {
-	tab = "» ",
-	trail = "·",
-	nbsp = "␣",
-	extends = "›",
-	precedes = "‹",
-}
-
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.hl.on_yank()`
