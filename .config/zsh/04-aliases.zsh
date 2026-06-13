@@ -11,6 +11,8 @@ alias of="open ."
 alias lsao="ls -a1"
 # List all user-defined aliases
 alias aliases="grep '^alias' ~/.config/zsh/04-aliases.zsh"
+# Clear the terminal
+alias ccc="clear"
 # List all brews installed by the user
 alias brew-leaves="brew leaves --installed-on-request"
 # Set python3 as the default python
