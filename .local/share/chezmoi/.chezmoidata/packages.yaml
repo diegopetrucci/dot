@@ -2,128 +2,175 @@ packages:
   darwin:
     taps:
       common:
-        - 'cameroncooke/axe'
-        - 'getsentry/tools'
-        - 'marcus/tap'
-        - 'peripheryapp/periphery'
-        - 'steipete/tap'
-        - 'tw93/tap'
-        - 'xcodesorg/made'
+        - "cameroncooke/axe"
+        - "darrylmorley/whatcable"
+        - "diegopetrucci/tap"
+        - "getsentry/tools"
+        - "marcus/tap"
+        - "opencode-ai/tap"
+        - "oven-sh/bun"
+        - "peripheryapp/periphery"
+        - "pointfreeco/tap"
+        - "simonbs/brrr-cli"
+        - "steipete/tap"
+        - "teamookla/speedtest"
+        - "tw93/tap"
+        - "wedow/tools"
+        - "xcodesorg/made"
       personal: []
       work: []
       mac_mini: []
     brews:
       common:
-        - 'asc'
-        - 'atuin'
-        - 'cameroncooke/axe/axe'
-        - 'bash'
-        - 'chezmoi'
-        - 'chruby'
-        - 'coreutils'
-        - 'docker-compose'
-        - 'fd'
-        - 'ffmpeg'
-        - 'fzf'
-        - 'gemini-cli'
-        - 'gh'
-        - 'ghostscript'
-        - 'imagemagick'
-        - 'jq'
-        - 'kotlin-language-server'
-        - 'lazygit'
-        - 'llmfit'
-        - 'lua-language-server'
-        - 'luacheck'
-        - 'luarocks'
-        - 'markdownlint-cli'
-        - 'mas'
-        - 'mermaid-cli'
-        - 'mise'
-        - 'mole'
-        - 'neovim'
-        - 'node'
-        - 'ollama'
-        - 'opencode'
-        - 'steipete/tap/oracle'
-        - 'pipx'
-        - 'postgresql@15'
-        - 'powerlevel10k'
-        - 'pre-commit'
-        - 'pyenv'
-        - 'pyenv-virtualenv'
-        - 'rbenv'
-        - 'rg'
-        - 'ripgrep'
-        - 'ruff'
-        - 'sentry-cli'
-        - 'signal-cli'
-        - 'speedtest-cli'
-        - 'swift-format'
-        - 'swiftformat'
-        - 'swiftlint'
-        - 'tmux'
-        - 'tree-sitter-cli'
-        - 'uv'
-        - 'vapor'
-        - 'wget'
-        - 'xcbeautify'
-        - 'xcode-build-server'
-        - 'xcodes'
-        - 'xcp'
-        - 'xcsift'
-        - 'yaml-language-server'
-        - 'yt-dlp'
-        - 'zoxide'
-        - 'zsh-autosuggestions'
-        - 'zsh-history-substring-search'
-        - 'zsh-syntax-highlighting'
-        - 'zsh-you-should-use'
+        - "asc"
+        - "atuin"
+        - "cameroncooke/axe/axe"
+        - "bash"
+        - "chezmoi"
+        - "chruby"
+        - "coreutils"
+        - "docker-compose"
+        - "fd"
+        - "ffmpeg"
+        - "fzf"
+        - "gemini-cli"
+        - "gh"
+        - "gitleaks"
+        - "ghostscript"
+        - "go"
+        - "imagemagick"
+        - "jq"
+        - "kotlin-language-server"
+        - "ktfmt"
+        - "lazygit"
+        - "llmfit"
+        - "lua-language-server"
+        - "luacheck"
+        - "luarocks"
+        - "magic-wormhole"
+        - "markdownlint-cli"
+        - "mermaid-cli"
+        - "mise"
+        - "mole"
+        - "neovim"
+        - "node"
+        - "node@22"
+        - "opencode"
+        - "oven-sh/bun/bun"
+        - "pipx"
+        - "pnpm"
+        - "pointfreeco/tap/pfw"
+        - "postgresql@15"
+        - "powerlevel10k"
+        - "pre-commit"
+        - "pyenv"
+        - "pyenv-virtualenv"
+        - "rg"
+        - "ripgrep"
+        - "rtk"
+        - "ruff"
+        - "ruby-install"
+        - "sentry-cli"
+        - "signal-cli"
+        - "simonbs/brrr-cli/brrr"
+        - "steipete/tap/peekaboo"
+        - "stylua"
+        - "taplo"
+        - "teamookla/speedtest/speedtest"
+        - "swift-format"
+        - "swiftformat"
+        - "ticket"
+        - "tmux"
+        - "tree-sitter-cli"
+        - "uv"
+        - "wget"
+        - "xcbeautify"
+        - "xcode-build-server"
+        - "xcodes"
+        - "xcp"
+        - "xcsift"
+        - "yaml-language-server"
+        - "yamlfmt"
+        - "yq"
+        - "zellij"
+        - "zoxide"
+        - "zsh-autosuggestions"
+        - "zsh-history-substring-search"
+        - "zsh-syntax-highlighting"
+        - "zsh-you-should-use"
       personal:
-        - 'tailscale'
+        - "direnv"
+        - "jdupes"
+        - "mas"
+        - "ollama"
+        - "qwen-code"
+        - "steipete/tap/oracle"
+        - "tailscale"
+        - "vapor"
+        - "yt-dlp"
       work:
-        - 'helm'
+        - "1password-cli"
+        - "helm"
       mac_mini:
-        - 'ical-buddy'
-        - 'nightshift'
-        - 'tailscale'
+        - "direnv"
+        - "jdupes"
+        - "mas"
+        - "mosh"
+        - "ollama"
+        - "qwen-code"
+        - "steipete/tap/oracle"
+        - "vapor"
+        - "yt-dlp"
+        - "ical-buddy"
+        - "nightshift"
+        - "tailscale"
     casks:
       common:
-        - 'alt-tab'
-        - 'bruno'
-        - 'claude-code'
-        - 'codex'
-        - 'codexbar'
-        - 'cursor'
-        - 'daisydisk'
-        - 'devcleaner'
-        - 'devtoys'
-        - 'ghostty'
-        - 'github-copilot-for-xcode'
-        - 'istat-menus'
-        - 'jordanbaird-ice'
-        - 'obsidian'
-        - 'peripheryapp/periphery/periphery'
-        - 'raycast'
-        - 'signal'
-        - 'telegram'
-        - 'tower'
-        - 'visual-studio-code'
-        - 'whatsapp'
-        - 'whisky'
-        - 'xcodes-app'
-        - 'zed'
-        - 'zen'
-        - 'zoom'
+        - "alt-tab"
+        - "bruno"
+        - "claude-code"
+        - "codex"
+        - "codexbar"
+        - "cursor"
+        - "daisydisk"
+        - "devcleaner"
+        - "devtoys"
+        - "ghostty"
+        - "github-copilot-for-xcode"
+        - "imageoptim"
+        - "istat-menus"
+        - "jordanbaird-ice"
+        - "obsidian"
+        - "peripheryapp/periphery/periphery"
+        - "raycast"
+        - "signal"
+        - "skorokithakis/tap/gnosis"
+        - "telegram"
+        - "tower"
+        - "steipete/tap/trimmy"
+        - "visual-studio-code"
+        - "whatcable"
+        - "whatsapp"
+        - "xcodes-app"
+        - "zed"
+        - "zen"
+        - "zoom"
       personal:
-        - 'diffusionbee'
-        - 'lm-studio'
-        - 'mullvad-vpn'
-        - 'raspberry-pi-imager'
+        - "cmux"
+        - "diffusionbee"
+        - "lm-studio"
+        - "mullvad-vpn"
+        - "raspberry-pi-imager"
+        - "termius"
+        - "whisky"
       work:
-        - 'gcloud-cli'
+        - "gcloud-cli"
       mac_mini:
-        - 'diffusionbee'
+        - "cmux"
+        - "diffusionbee"
+        - "orbstack"
+        - "termius"
+        - "whisky"
     mas:
       common: []
       personal: []
@@ -167,33 +214,38 @@ packages:
       # - '1662217862' # Wipr
     scripts:
       common:
-        - 'curl -fsSL https://ampcode.com/install.sh | bash'
-        - 'curl -fsSL https://bun.sh/install | bash'
-        - 'curl -fsSL https://ollama.com/install.sh | sh'
-      personal: []
+        - "curl -fsSL https://bun.sh/install | bash"
+        - "curl -fsSL https://herdr.dev/install.sh | sh"
+      personal:
+        - "curl -fsSL https://ampcode.com/install.sh | bash"
+        - "curl -fsSL https://ollama.com/install.sh | sh"
+        - "curl -LsSf https://code.kimi.com/install.sh | bash"
+        - "curl -LsSf https://mistral.ai/vibe/install.sh | bash"
       work: []
       mac_mini:
-        - 'curl -fsSL https://openclaw.ai/install.sh | bash'
+        - "curl -fsSL https://ollama.com/install.sh | sh"
+        - "curl -LsSf https://code.kimi.com/install.sh | bash"
+        - "curl -LsSf https://mistral.ai/vibe/install.sh | bash"
     pipx:
       common:
-        - 'pymobiledevice3'
+        - "pymobiledevice3"
       personal: []
       work: []
       mac_mini: []
     npm:
       common:
-        - '@github/copilot-language-server'
-        - '@mariozechner/pi-coding-agent'
-        - '@openclaw@latest'
-        - '@tobilu/qmd'
-      personal: []
+        - "@github/copilot-language-server"
+        - "hunkdiff"
+        - "@tobilu/qmd"
+      personal:
+        - "@earendil-works/pi-coding-agent"
       work: []
       mac_mini:
-        - 'clawdhub'
+        - "@earendil-works/pi-coding-agent"
     bun:
       common:
-        - 'codex-wrapped'
+        - "codex-wrapped"
       personal: []
       work: []
       mac_mini:
-        - 'https://github.com/tobi/qmd'
+        - "https://github.com/tobi/qmd"
