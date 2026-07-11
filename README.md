@@ -7,6 +7,7 @@ This is the public subset of my private [chezmoi](https://www.chezmoi.io) setup.
 - AI agents:
 - - [Pi](./.pi)
 - - [Codex](./.codex)
+- - [OpenCode](./.config/opencode) 
 - AI skills:
 - - [Skills](https://github.com/diegopetrucci/ai-agents-skills)
 - - [Pi extensions](https://github.com/diegopetrucci/pi-extensions)
