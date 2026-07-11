@@ -42,3 +42,5 @@
     enabled = true
 [tag]
     sort = version:refname
+[user]
+    name = Diego Petrucci
