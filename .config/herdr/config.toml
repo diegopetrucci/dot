@@ -1,0 +1,18 @@
+onboarding = false
+
+[theme]
+name = "catppuccin"
+
+[experimental]
+pane_history = true
+
+[keys]
+prefix = "ctrl+space"
+
+[ui]
+show_agent_labels_on_pane_borders = true
+agent_panel_sort = "priority"
+sidebar_width = 50
+
+[ui.toast]
+delivery = "system"
