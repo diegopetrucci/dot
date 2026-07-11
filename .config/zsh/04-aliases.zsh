@@ -11,8 +11,6 @@ alias of="open ."
 alias lsao="ls -a1"
 # List all user-defined aliases
 alias aliases="grep '^alias' ~/.config/zsh/04-aliases.zsh"
-# Clear the terminal
-alias ccc="clear"
 # List all brews installed by the user
 alias brew-leaves="brew leaves --installed-on-request"
 # Set python3 as the default python
@@ -23,6 +21,7 @@ mkcd () {
   \mkdir -p "$1"
   cd "$1"
 }
+alias ccc="clear"
 
 # Weird paths
 alias icloud-drive="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/"
@@ -69,6 +68,8 @@ alias gsm="git switch main && git pull"
 alias gsc="git switch -c"
 # Cherry pick
 alias gcp="git cherry-pick"
+# Remove untracked files and directories
+alias git-clean-untracked="git clean -fd"
 
 # AI agents
 
@@ -120,6 +121,8 @@ alias gemini-yolo="gemini --yolo"
 alias qwen-yolo="qwen --yolo"
 # Run Mistral Vibe in full automatic mode
 alias vibe-yolo="vibe --auto-approve"
+# Start a live hunk server
+alias hdw="hunk diff --watch"
 
 # Xcode
 
