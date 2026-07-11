@@ -1,8 +1,8 @@
 {
-  "lastChangelogVersion": "0.75.5",
+  "lastChangelogVersion": "0.80.3",
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-5.5",
-  "defaultThinkingLevel": "off",
+  "defaultThinkingLevel": "high",
   "theme": "dark",
   "editorPaddingX": 1,
   "quietStartup": true,
@@ -10,33 +10,31 @@
     "enabled": true
   },
   "packages": [
-    "https://github.com/nicobailon/pi-boomerang",
-    "https://github.com/nicobailon/pi-review-loop",
     "npm:pi-subagents",
-    "npm:pi-context",
-    {
-      "source": "npm:@plannotator/pi-extension",
-      "skills": []
-    },
-    "https://github.com/davebcn87/pi-autoresearch",
     "npm:pi-mcp-adapter",
+    "npm:@ff-labs/pi-fff",
+    "npm:@howaboua/pi-codex-conversion",
+    "npm:pi-codex-goal",
+    "npm:pi-web-access",
     "npm:@diegopetrucci/pi-oracle",
     "npm:@diegopetrucci/pi-minimal-footer",
-    "npm:@diegopetrucci/pi-permission-gate",
-    "npm:@diegopetrucci/pi-confirm-destructive",
     "npm:@diegopetrucci/pi-notify",
     "npm:@diegopetrucci/pi-context-cap",
     "npm:@diegopetrucci/pi-context-inspector",
     "npm:@diegopetrucci/pi-librarian",
     "npm:@diegopetrucci/pi-openai-fast",
-    "npm:@diegopetrucci/pi-quiet-tools",
     "npm:@diegopetrucci/pi-dirty-repo-guard",
-    "npm:@ff-labs/pi-fff",
     "npm:@diegopetrucci/pi-inline-bash",
     "npm:@diegopetrucci/pi-triage-comments",
-    "npm:@howaboua/pi-codex-conversion",
     "npm:@diegopetrucci/pi-brrr",
+    "npm:@diegopetrucci/pi-annotate-git-diff",
+    "npm:@diegopetrucci/pi-annotate-last-message",
+    "npm:@diegopetrucci/pi-illustrations-to-explain-things",
+    "npm:@diegopetrucci/pi-contrarian",
     "npm:@diegopetrucci/pi-review"
   ],
-  "hideThinkingBlock": false
+  "hideThinkingBlock": false,
+  "treeFilterMode": "no-tools",
+  "collapseChangelog": true,
+  "defaultProjectTrust": "ask"
 }
