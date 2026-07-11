@@ -4,5 +4,12 @@ return {
 		"MunifTanjim/nui.nvim",
 	},
 	lazy = false,
-	opts = {},
+	opts = {
+		restricted_keys = {
+			h = false,
+			j = false,
+			k = false,
+			l = false,
+		},
+	},
 }
