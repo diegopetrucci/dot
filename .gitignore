@@ -1,12 +1,7 @@
-.config/nvim/lazy-lock.json
-.config/nvim/lua/plugins/node_modules
-.config/nvim/lua/plugins/package-lock.json
-.config/nvim/lua/plugins/package.json
-
 AGENTS.md
-.claude/CLAUDE.md
-.codex/rules/
+.tickets/
 
-.openclaw/
-.codex/automations/
-.claude/scheduled-tasks/
+# Generated automation outputs can contain cloned repositories / large packfiles.
+dot_codex/automations/**/runs/
+dot_codex/automations/**/reports/
+dot_codex/automations/**/mirrors/
