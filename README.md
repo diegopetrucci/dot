@@ -2,8 +2,6 @@
 
 This is the public subset of my private [chezmoi](https://www.chezmoi.io) setup. I sync selected files here from `~/.local/share/chezmoi` whenever I get around to it, so this repo is representative rather than exhaustive.
 
-## What's in here
-
 - AI agents:
   - [TLH](./.the-last-harness/agent/settings.json)
   - [Pi](./.pi)
