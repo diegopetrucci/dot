@@ -5,12 +5,12 @@ This is the public subset of my private [chezmoi](https://www.chezmoi.io) setup.
 ## What's in here
 
 - AI agents:
-- - [Pi](./.pi)
-- - [Codex](./.codex)
-- - [OpenCode](./.config/opencode) 
+  - [Pi](./.pi)
+  - [Codex](./.codex)
+  - [OpenCode](./.config/opencode) 
 - AI skills:
-- - [Skills](https://github.com/diegopetrucci/ai-agents-skills)
-- - [Pi extensions](https://github.com/diegopetrucci/pi-extensions)
+  - [Skills](https://github.com/diegopetrucci/ai-agents-skills)
+  - [Pi extensions](https://github.com/diegopetrucci/pi-extensions)
 - [Atuin](./.config/atuin): shell history/search.
 - [Chezmoi package data](./.local/share/chezmoi/.chezmoidata/packages.yaml): the package inventory that helps keep machines aligned.
 - [Ghostty](./.config/ghostty): terminal config and theme overrides.
