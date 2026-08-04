@@ -16,6 +16,61 @@ alias brew-leaves="brew leaves --installed-on-request"
 # Set python3 as the default python
 alias python=python3
 alias gt="gittower ."
+# Safer recursive deletion: `rm -rf path` moves to the macOS Trash instead.
+# This has to be a function because aliases cannot match flags like `-rf`.
+rm() {
+  emulate -L zsh
+
+  local has_recursive=0
+  local has_force=0
+  local parsing_options=1
+  local arg opt
+  local -a trash_args
+  local -a normalized_trash_args
+
+  for arg in "$@"; do
+    if (( parsing_options )); then
+      if [[ "$arg" == "--" ]]; then
+        parsing_options=0
+        continue
+      elif [[ "$arg" == "-" || "$arg" != -* ]]; then
+        parsing_options=0
+        trash_args+=("$arg")
+        continue
+      elif [[ "$arg" == --* ]]; then
+        # Unknown long option: leave normal rm semantics intact.
+        command rm "$@"
+        return $?
+      fi
+
+      opt="${arg#-}"
+      [[ "$opt" == *[rR]* ]] && has_recursive=1
+      [[ "$opt" == *f* ]] && has_force=1
+      continue
+    fi
+
+    trash_args+=("$arg")
+  done
+
+  if (( has_recursive && has_force )); then
+    if (( ${#trash_args[@]} == 0 )); then
+      print -u2 "rm: missing operand"
+      return 1
+    fi
+
+    # /usr/bin/trash does not treat `--` as an option delimiter, so make
+    # relative paths beginning with '-' unambiguous.
+    for arg in "${trash_args[@]}"; do
+      [[ "$arg" == -* ]] && arg="./$arg"
+      normalized_trash_args+=("$arg")
+    done
+    trash_args=("${normalized_trash_args[@]}")
+
+    command trash "${trash_args[@]}"
+  else
+    command rm "$@"
+  fi
+}
 # Create a directory and change into it
 mkcd () {
   \mkdir -p "$1"
