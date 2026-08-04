@@ -71,7 +71,6 @@ packages:
         - "pyenv-virtualenv"
         - "rg"
         - "ripgrep"
-        - "rtk"
         - "ruff"
         - "ruby-install"
         - "sentry-cli"
