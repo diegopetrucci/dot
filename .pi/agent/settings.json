@@ -1,21 +1,46 @@
 {
-  "lastChangelogVersion": "0.80.3",
+  "lastChangelogVersion": "0.83.0",
   "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.5",
+  "defaultModel": "gpt-5.6-sol",
   "defaultThinkingLevel": "high",
+  "showCacheMissNotices": true,
   "theme": "dark",
   "editorPaddingX": 1,
   "quietStartup": true,
   "compaction": {
     "enabled": true
   },
+  "subagents": {
+    "agentOverrides": {
+      "scout": {
+        "model": "openai-codex/gpt-5.4-mini",
+        "thinking": "high"
+      },
+      "researcher": {
+        "model": "openai-codex/gpt-5.4-mini",
+        "thinking": "high"
+      },
+      "reviewer": {
+        "model": "anthropic/claude-opus-5",
+        "thinking": "high"
+      },
+      "worker": {
+        "model": "openai-codex/gpt-5.6-sol",
+        "thinking": "xhigh"
+      },
+      "planner": {
+        "model": "openai-codex/gpt-5.6-sol",
+        "thinking": "medium"
+      }
+    }
+  },
   "packages": [
     "npm:pi-subagents",
     "npm:pi-mcp-adapter",
     "npm:@ff-labs/pi-fff",
-    "npm:@howaboua/pi-codex-conversion",
     "npm:pi-codex-goal",
     "npm:pi-web-access",
+    "npm:opencode-pi",
     "npm:@diegopetrucci/pi-oracle",
     "npm:@diegopetrucci/pi-minimal-footer",
     "npm:@diegopetrucci/pi-notify",
@@ -31,7 +56,13 @@
     "npm:@diegopetrucci/pi-annotate-last-message",
     "npm:@diegopetrucci/pi-illustrations-to-explain-things",
     "npm:@diegopetrucci/pi-contrarian",
-    "npm:@diegopetrucci/pi-review"
+    "npm:@diegopetrucci/pi-review",
+    "npm:pi-dynamic-context-pruning",
+    "npm:@howaboua/pi-codex-conversion",
+    "npm:@gotgenes/pi-anthropic-auth",
+    "npm:@diegopetrucci/pi-code-reviewer",
+    "npm:@diegopetrucci/pi-claude-fast",
+    "npm:@diegopetrucci/pi-quiet-tools"
   ],
   "hideThinkingBlock": false,
   "treeFilterMode": "no-tools",
