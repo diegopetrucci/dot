@@ -88,11 +88,6 @@ alias cm="chezmoi merge"
 alias cadd="chezmoi add"
 alias cdiff="chezmoi diff"
 alias capp="chezmoi apply"
-# Sync ~/.openclaw via the daily sync script
-sync-openclaw() {
-  "${HOME}/.local/bin/sync-openclaw-daily"
-}
-
 # Git
 
 # Show git status in short format
@@ -132,10 +127,12 @@ alias git-clean-untracked="git clean -fd"
 alias tlh-install-from-main="curl -fsSL https://raw.githubusercontent.com/diegopetrucci/the-last-harness/main/install.sh | bash -s -- --ref main --track ref"
 # Install The Last Harness from the latest release
 alias tlh-install-from-release="curl -fsSL https://github.com/diegopetrucci/the-last-harness/releases/latest/download/install.sh | bash -s --"
+alias tm="tlh-main"
 # Run Claude Code in full automatic mode
 alias claude-yolo="claude --dangerously-skip-permissions"
 alias ccy="claude --dangerously-skip-permissions"
 # Run Codex in full automatic mode
+alias cb="codexbar"
 alias codex-yolo="codex --dangerously-bypass-approvals-and-sandbox"
 alias cxy="codex --dangerously-bypass-approvals-and-sandbox"
 # Attach or switch to the remote Codex tmux session, creating it if needed
