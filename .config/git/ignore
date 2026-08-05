@@ -2,3 +2,5 @@
 
 # Disable pyright lsp/formatter per-project
 .disable-pyright
+
+**/.claude/settings.local.json
