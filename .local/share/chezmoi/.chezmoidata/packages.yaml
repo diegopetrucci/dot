@@ -6,7 +6,6 @@ packages:
         - "darrylmorley/whatcable"
         - "diegopetrucci/tap"
         - "getsentry/tools"
-        - "marcus/tap"
         - "opencode-ai/tap"
         - "oven-sh/bun"
         - "peripheryapp/periphery"
@@ -19,7 +18,8 @@ packages:
         - "xcodesorg/made"
       personal: []
       work: []
-      mac_mini: []
+      mac_mini:
+        - "mattt/tap"
     brews:
       common:
         - "asc"
@@ -128,7 +128,6 @@ packages:
         - "vapor"
         - "yt-dlp"
         - "ical-buddy"
-        - "nightshift"
         - "tailscale"
     casks:
       common:
@@ -174,6 +173,7 @@ packages:
       mac_mini:
         - "cmux"
         - "diffusionbee"
+        - "mattt/tap/imcp"
         - "orbstack"
         - "termius"
         - "whisky"
@@ -181,47 +181,11 @@ packages:
       common: []
       personal: []
       work: []
-      mac_mini: []
-      # - '6472630023' # Acidity
-      # - '937984704' # Amphetamine
-      # - '1091189122' # Bear
-      # - '1352778147' # Bitwarden
-      # - '6451469297' # DeArrow
-      # - '640199958' # Developer
-      # - '1457961323' # diskDeduper
-      # - '524373870' # Due
-      # - '1474335294' # GoodLinks
-      # - '1502839586' # Hand Mirror
-      # - '1666139593' # Homecoming for Mastodon
-      # - '1533590432' # Homie
-      # - '1544743900' # Hush
-      # - '6639617400' # imgpls
-      # - '1622835804' # Kagi for Safari
-      # - '409183694' # Keynote
-      # - '1659154653' # Mona
-      # - '1592917505' # Noir
-      # - '409203825' # Numbers
-      # - '409201541' # Pages
-      # - '592704001' # Photos Duplicate Cleaner
-      # - '1160374471' # PiPifier
-      # - '1289583905' # Pixelmator Pro
-      # - '1540491573' # Scenecuts
-      # - '6449873635' # Sink It
-      # - '1176895641' # Spark
-      # - '1573461917' # SponsorBlock
-      # - '1671452642' # StopTheFonts
-      # - '1376402589' # StopTheMadness
-      # - '6471380298' # StopTheMadness Pro
-      # - '1568262835' # Super Agent
-      # - '6746719441' # Technotes
-      # - '899247664' # TestFlight
-      # - '425424353' # The Unarchiver
-      # - '1450874784' # Transporter
-      # - '1662217862' # Wipr
     scripts:
       common:
         - "curl -fsSL https://bun.sh/install | bash"
         - "curl -fsSL https://herdr.dev/install.sh | sh"
+        - "curl -fsSL https://plannotator.ai/install.sh | bash"
       personal:
         - "curl -fsSL https://ampcode.com/install.sh | bash"
         - "curl -fsSL https://ollama.com/install.sh | sh"
@@ -251,7 +215,9 @@ packages:
     bun:
       common:
         - "codex-wrapped"
-      personal: []
+      personal:
+        - "beautiful-mermaid"
       work: []
       mac_mini:
+        - "beautiful-mermaid"
         - "https://github.com/tobi/qmd"
