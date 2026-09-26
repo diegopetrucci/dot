@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.83.0",
+  "lastChangelogVersion": "0.85.1",
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-5.6-sol",
   "defaultThinkingLevel": "high",
@@ -35,19 +35,15 @@
     }
   },
   "packages": [
-    "npm:pi-subagents",
     "npm:pi-mcp-adapter",
-    "npm:@ff-labs/pi-fff",
     "npm:pi-codex-goal",
     "npm:pi-web-access",
-    "npm:opencode-pi",
     "npm:@diegopetrucci/pi-oracle",
     "npm:@diegopetrucci/pi-minimal-footer",
     "npm:@diegopetrucci/pi-notify",
     "npm:@diegopetrucci/pi-context-cap",
     "npm:@diegopetrucci/pi-context-inspector",
     "npm:@diegopetrucci/pi-librarian",
-    "npm:@diegopetrucci/pi-openai-fast",
     "npm:@diegopetrucci/pi-dirty-repo-guard",
     "npm:@diegopetrucci/pi-inline-bash",
     "npm:@diegopetrucci/pi-triage-comments",
@@ -58,11 +54,12 @@
     "npm:@diegopetrucci/pi-contrarian",
     "npm:@diegopetrucci/pi-review",
     "npm:pi-dynamic-context-pruning",
-    "npm:@howaboua/pi-codex-conversion",
     "npm:@gotgenes/pi-anthropic-auth",
     "npm:@diegopetrucci/pi-code-reviewer",
-    "npm:@diegopetrucci/pi-claude-fast",
-    "npm:@diegopetrucci/pi-quiet-tools"
+    "npm:@diegopetrucci/pi-quiet-tools",
+    "npm:@injaneity/pi-computer-use",
+    "npm:@plannotator/pi-extension",
+    "npm:@diegopetrucci/pi-fast"
   ],
   "hideThinkingBlock": false,
   "treeFilterMode": "no-tools",
